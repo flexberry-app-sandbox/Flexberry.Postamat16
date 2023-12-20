@@ -1,0 +1,183 @@
+﻿{
+  "name": "IISPostamat16Хранение",
+  "modelName": "i-i-s-postamat16-хранение",
+  "className": "Хранение",
+  "nameSpace": "IIS.Postamat16",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "датаЗавершения",
+      "type": "date",
+      "flexberryType": "DateTime",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "датаНачала",
+      "type": "date",
+      "flexberryType": "DateTime",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "номер",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "продления",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "ячейка",
+      "relatedTo": "i-i-s-postamat16-ячейка",
+      "inverse": null
+    }
+  ],
+  "hasMany": [
+    {
+      "name": "регистрПосылки",
+      "relatedTo": "i-i-s-postamat16-регистр-посылки",
+      "inverse": "хранение"
+    }
+  ],
+  "projections": [
+    {
+      "name": "ХранениеE",
+      "modelName": "i-i-s-postamat16-хранение",
+      "attrs": [
+        {
+          "name": "номер",
+          "caption": "Номер",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "датаНачала",
+          "caption": "Дата начала",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "датаЗавершения",
+          "caption": "Дата завершения",
+          "hidden": false,
+          "index": 2
+        },
+        {
+          "name": "продления",
+          "caption": "Продления",
+          "hidden": false,
+          "index": 3
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": "НомерЯчейки",
+          "lookupValueField": "номерЯчейки",
+          "relationName": "Ячейка",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "номерЯчейки",
+              "caption": "Номер ячейки",
+              "hidden": true,
+              "index": 5
+            }
+          ],
+          "index": 4,
+          "type": "standard",
+          "caption": "Ячейка",
+          "name": "ячейка",
+          "relatedTo": "i-i-s-postamat16-ячейка",
+          "inverse": null
+        }
+      ],
+      "hasMany": [
+        {
+          "projectionName": "РегистрПосылкиE",
+          "caption": "Регистр посылки",
+          "name": "регистрПосылки",
+          "relatedTo": "i-i-s-postamat16-регистр-посылки",
+          "inverse": null
+        }
+      ]
+    },
+    {
+      "name": "ХранениеL",
+      "modelName": "i-i-s-postamat16-хранение",
+      "attrs": [
+        {
+          "name": "номер",
+          "caption": "Номер",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "датаНачала",
+          "caption": "Дата начала",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "датаЗавершения",
+          "caption": "Дата завершения",
+          "hidden": false,
+          "index": 2
+        },
+        {
+          "name": "продления",
+          "caption": "Продления",
+          "hidden": false,
+          "index": 3
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Ячейка",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "номерЯчейки",
+              "caption": "Номер ячейки",
+              "hidden": false,
+              "index": 4
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "Номер ячейки",
+          "name": "ячейка",
+          "relatedTo": "i-i-s-postamat16-ячейка",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

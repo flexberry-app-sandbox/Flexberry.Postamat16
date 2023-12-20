@@ -1,0 +1,101 @@
+<h3 class="ui header">{{t "forms.i-i-s-postamat16-хранение-e.caption"}}</h3>
+
+<form class="ui form flexberry-vertical-form" role="form">
+  {{flexberry-error error=error}}
+  <div class="field">
+    <div class="flexberry-edit-panel">
+      {{#unless readonly}}
+        <button class="ui button save-button" {{action "save"}}>
+          {{t "forms.edit-form.save-button-text"}}
+        </button>
+        {{#unless model.isNew}}
+          <button class="ui button save-del-button" {{action "delete"}}>
+            {{t "forms.edit-form.delete-button-text"}}
+          </button>
+        {{/unless}}
+      {{/unless}}
+      <button class="ui button close-button" {{action "close"}}>
+        {{t "forms.edit-form.close-button-text"}}
+      </button>
+    </div>
+  </div>
+  <div class="field flexberry-validationsummary-container">
+    <div class="sixteen wide">
+      {{flexberry-validationsummary errors=(v-get validationObject "messages")}}
+    </div>
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.номер
+      class=(if (v-get validationModel "номер" "isInvalid") "error")
+      label=(t "forms.i-i-s-postamat16-хранение-e.номер-caption")
+      data-test-i-i-s-postamat16-хранение-e-номер=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "номер" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-postamat16-хранение-e.датаНачала-caption"}}</label>
+    {{flexberry-simpledatetime
+      type="date"
+      readonly=readonly
+      value=model.датаНачала
+      class=(if (v-get validationModel "датаНачала" "isInvalid") "error")
+      data-test-i-i-s-postamat16-хранение-e-датаНачала=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "датаНачала" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-postamat16-хранение-e.датаЗавершения-caption"}}</label>
+    {{flexberry-simpledatetime
+      type="date"
+      readonly=readonly
+      value=model.датаЗавершения
+      class=(if (v-get validationModel "датаЗавершения" "isInvalid") "error")
+      data-test-i-i-s-postamat16-хранение-e-датаЗавершения=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "датаЗавершения" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.продления
+      class=(if (v-get validationModel "продления" "isInvalid") "error")
+      label=(t "forms.i-i-s-postamat16-хранение-e.продления-caption")
+      data-test-i-i-s-postamat16-хранение-e-продления=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "продления" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-postamat16-хранение-e.ячейка-caption"}}</label>
+    {{flexberry-lookup
+      choose="showLookupDialog"
+      remove="removeLookupValue"
+      value=model.ячейка
+      displayAttributeName="номерЯчейки"
+      autocomplete=true
+      relationName="ячейка"
+      projection="ЯчейкаL"
+      title=(t "forms.i-i-s-postamat16-хранение-e.ячейка-caption")
+      readonly=readonly
+      componentName="ячейкаLookup"
+      class=(if (v-get validationModel "ячейка" "isInvalid") "error")
+      data-test-i-i-s-postamat16-хранение-e-ячейка=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "ячейка" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-postamat16-хранение-e.регистрПосылки-caption"}}</label>
+    {{flexberry-groupedit
+      componentName="регистрПосылкиGroupEdit"
+      mainModelProjection=modelProjection
+      modelProjection=modelProjection.attributes.регистрПосылки
+      content=model.регистрПосылки
+      readonly=readonly
+      orderable=false
+      class=(if (v-get validationModel "регистрПосылки" "isInvalid") "error")
+      data-test-i-i-s-postamat16-хранение-e-регистрПосылки=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "регистрПосылки" "message")}}
+  </div>
+</form>

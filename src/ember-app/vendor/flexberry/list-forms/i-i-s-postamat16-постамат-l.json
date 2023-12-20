@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-postamat16-постамат-e",
+  "editForm": "i-i-s-postamat16-постамат-e",
+  "external": false,
+  "caption": "Постамат",
+  "name": "IISPostamat16ПостаматL",
+  "className": "ПостаматL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-postamat16-постамат",
+      "modelProjection": "ПостаматL"
+    }
+  ]
+}

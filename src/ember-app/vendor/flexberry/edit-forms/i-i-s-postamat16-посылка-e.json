@@ -1,0 +1,31 @@
+﻿{
+  "propertyLookup": [
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "Пользователь",
+      "projection": "ПользовательL",
+      "detailModelName": null
+    },
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "Логистика",
+      "projection": "ЛогистикаL",
+      "detailModelName": null
+    }
+  ],
+  "external": false,
+  "caption": "Посылка",
+  "name": "IISPostamat16ПосылкаE",
+  "className": "ПосылкаE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-postamat16-посылка",
+      "modelProjection": "ПосылкаE"
+    }
+  ]
+}

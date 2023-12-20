@@ -1,0 +1,23 @@
+﻿{
+  "propertyLookup": [
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "Хранение",
+      "projection": "ХранениеL",
+      "detailModelName": null
+    }
+  ],
+  "external": false,
+  "caption": "Уведомление",
+  "name": "IISPostamat16УведомлениеE",
+  "className": "УведомлениеE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-postamat16-уведомление",
+      "modelProjection": "УведомлениеE"
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+﻿{
+  "applicationCaption": "Postamat16",
+  "applicationTitle": "Postamat16",
+  "items": [
+    {
+      "link": null,
+      "menuName": "postamat16",
+      "caption": "Postamat16",
+      "title": "Postamat16",
+      "children": [
+        {
+          "link": "i-i-s-postamat16-посылка-l",
+          "menuName": null,
+          "caption": "Посылка",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-postamat16-ячейка-l",
+          "menuName": null,
+          "caption": "Ячейка",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-postamat16-пользователь-l",
+          "menuName": null,
+          "caption": "Пользователь",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-postamat16-служба-доставки-l",
+          "menuName": null,
+          "caption": "Служба доставки",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-postamat16-ключ-l",
+          "menuName": null,
+          "caption": "Ключ",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-postamat16-логистика-l",
+          "menuName": null,
+          "caption": "Логистика",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-postamat16-хранение-l",
+          "menuName": null,
+          "caption": "Хранение",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-postamat16-постамат-l",
+          "menuName": null,
+          "caption": "Постамат",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-postamat16-уведомление-l",
+          "menuName": null,
+          "caption": "Уведомление",
+          "title": "",
+          "children": null
+        }
+      ]
+    }
+  ],
+  "mobile": true
+}

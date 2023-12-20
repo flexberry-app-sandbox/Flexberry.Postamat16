@@ -1,0 +1,162 @@
+﻿{
+  "name": "IISPostamat16Постамат",
+  "modelName": "i-i-s-postamat16-постамат",
+  "className": "Постамат",
+  "nameSpace": "IIS.Postamat16",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "адрес",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "номер",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "статус",
+      "type": "i-i-s-postamat16-статусы",
+      "flexberryType": "Статусы",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "службаДоставки",
+      "relatedTo": "i-i-s-postamat16-служба-доставки",
+      "inverse": null
+    }
+  ],
+  "hasMany": [
+    {
+      "name": "регистрХран",
+      "relatedTo": "i-i-s-postamat16-регистр-хран",
+      "inverse": "постамат"
+    }
+  ],
+  "projections": [
+    {
+      "name": "ПостаматE",
+      "modelName": "i-i-s-postamat16-постамат",
+      "attrs": [
+        {
+          "name": "номер",
+          "caption": "Номер",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "адрес",
+          "caption": "Адрес",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "статус",
+          "caption": "Статус",
+          "hidden": false,
+          "index": 2
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": "Наименвоание",
+          "lookupValueField": "наименвоание",
+          "relationName": "СлужбаДоставки",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "наименвоание",
+              "caption": "Наименвоание",
+              "hidden": true,
+              "index": 4
+            }
+          ],
+          "index": 3,
+          "type": "standard",
+          "caption": "Служба доставки",
+          "name": "службаДоставки",
+          "relatedTo": "i-i-s-postamat16-служба-доставки",
+          "inverse": null
+        }
+      ],
+      "hasMany": [
+        {
+          "projectionName": "РегистрХранE",
+          "caption": "Регистр хран",
+          "name": "регистрХран",
+          "relatedTo": "i-i-s-postamat16-регистр-хран",
+          "inverse": null
+        }
+      ]
+    },
+    {
+      "name": "ПостаматL",
+      "modelName": "i-i-s-postamat16-постамат",
+      "attrs": [
+        {
+          "name": "номер",
+          "caption": "Номер",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "адрес",
+          "caption": "Адрес",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "статус",
+          "caption": "Статус",
+          "hidden": false,
+          "index": 2
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "СлужбаДоставки",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "наименвоание",
+              "caption": "Наименвоание",
+              "hidden": false,
+              "index": 3
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "Наименвоание",
+          "name": "службаДоставки",
+          "relatedTo": "i-i-s-postamat16-служба-доставки",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

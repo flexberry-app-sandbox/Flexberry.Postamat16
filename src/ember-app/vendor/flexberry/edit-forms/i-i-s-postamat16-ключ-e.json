@@ -1,0 +1,39 @@
+﻿{
+  "propertyLookup": [
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "Пользователь",
+      "projection": "ПользовательL",
+      "detailModelName": null
+    },
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "Посылка",
+      "projection": "ПосылкаL",
+      "detailModelName": null
+    },
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "Хранение",
+      "projection": "ХранениеL",
+      "detailModelName": null
+    }
+  ],
+  "external": false,
+  "caption": "Ключ",
+  "name": "IISPostamat16КлючE",
+  "className": "КлючE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-postamat16-ключ",
+      "modelProjection": "КлючE"
+    }
+  ]
+}

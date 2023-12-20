@@ -1,0 +1,269 @@
+﻿{
+  "name": "IISPostamat16Ключ",
+  "modelName": "i-i-s-postamat16-ключ",
+  "className": "Ключ",
+  "nameSpace": "IIS.Postamat16",
+  "parentModelName": "i-i-s-postamat16-уведомление",
+  "parentClassName": "Уведомление",
+  "attrs": [
+    {
+      "name": "сгенКлюч",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "пользователь",
+      "relatedTo": "i-i-s-postamat16-пользователь",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "посылка",
+      "relatedTo": "i-i-s-postamat16-посылка",
+      "inverse": null
+    }
+  ],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "КлючE",
+      "modelName": "i-i-s-postamat16-ключ",
+      "attrs": [
+        {
+          "name": "сгенКлюч",
+          "caption": "Сгенерированный ключ",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "уведомление",
+          "caption": "Уведомление",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "фИО",
+          "caption": "ФИО пользователя",
+          "hidden": false,
+          "index": 2
+        },
+        {
+          "name": "номер",
+          "caption": "Номер посылки",
+          "hidden": false,
+          "index": 3
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": "ФИО",
+          "lookupValueField": "фИО",
+          "relationName": "Пользователь",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "фИО",
+              "caption": "ФИО",
+              "hidden": true,
+              "index": 5
+            },
+            {
+              "name": "номерТелефона",
+              "caption": "Номер телефона пользователя",
+              "hidden": false,
+              "index": 6
+            }
+          ],
+          "index": 4,
+          "type": "standard",
+          "caption": "Пользователь",
+          "name": "пользователь",
+          "relatedTo": "i-i-s-postamat16-пользователь",
+          "inverse": null
+        },
+        {
+          "lookupValue": "Номер",
+          "lookupValueField": "номер",
+          "relationName": "Посылка",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "номер",
+              "caption": "Номер",
+              "hidden": true,
+              "index": 8
+            }
+          ],
+          "index": 7,
+          "type": "standard",
+          "caption": "Номер посылка",
+          "name": "посылка",
+          "relatedTo": "i-i-s-postamat16-посылка",
+          "inverse": null
+        },
+        {
+          "lookupValue": "Продления",
+          "lookupValueField": "продления",
+          "relationName": "Хранение",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "продления",
+              "caption": "Продления посылик",
+              "hidden": true,
+              "index": 10
+            },
+            {
+              "name": "датаНачала",
+              "caption": "Дата начала хранения",
+              "hidden": false,
+              "index": 11
+            },
+            {
+              "name": "датаЗавершения",
+              "caption": "Дата завершения хранения",
+              "hidden": false,
+              "index": 12
+            }
+          ],
+          "index": 9,
+          "type": "standard",
+          "caption": "Продление посылки",
+          "name": "хранение",
+          "relatedTo": "i-i-s-postamat16-хранение",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    },
+    {
+      "name": "КлючL",
+      "modelName": "i-i-s-postamat16-ключ",
+      "attrs": [
+        {
+          "name": "сгенКлюч",
+          "caption": "Сгенерированный ключ",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "уведомление",
+          "caption": "Уведомление",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "фИО",
+          "caption": "ФИО пользователя",
+          "hidden": false,
+          "index": 2
+        },
+        {
+          "name": "номер",
+          "caption": "Номер посылки",
+          "hidden": false,
+          "index": 3
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Пользователь",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "фИО",
+              "caption": "ФИО",
+              "hidden": false,
+              "index": 4
+            },
+            {
+              "name": "номерТелефона",
+              "caption": "Номер телефона пользователя",
+              "hidden": false,
+              "index": 5
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "ФИО",
+          "name": "пользователь",
+          "relatedTo": "i-i-s-postamat16-пользователь",
+          "inverse": null
+        },
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Посылка",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "номер",
+              "caption": "Номер посылки",
+              "hidden": false,
+              "index": 6
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "Номер посылки",
+          "name": "посылка",
+          "relatedTo": "i-i-s-postamat16-посылка",
+          "inverse": null
+        },
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Хранение",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "продления",
+              "caption": "Продления посылки",
+              "hidden": false,
+              "index": 7
+            },
+            {
+              "name": "датаНачала",
+              "caption": "Дата начала хранения",
+              "hidden": false,
+              "index": 8
+            },
+            {
+              "name": "датаЗавершения",
+              "caption": "Дата начала хранения",
+              "hidden": false,
+              "index": 9
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "Продления посылки",
+          "name": "хранение",
+          "relatedTo": "i-i-s-postamat16-хранение",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}
