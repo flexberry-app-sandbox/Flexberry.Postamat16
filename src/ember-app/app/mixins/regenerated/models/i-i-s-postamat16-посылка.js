@@ -49,7 +49,8 @@ export let defineProjections = function (modelClass) {
       фИО: attr('ФИО', { index: 3, hidden: true })
     }, { index: 2, displayMemberPath: 'фИО' }),
     логистика: belongsTo('i-i-s-postamat16-логистика', 'Логистика', {
-      информация: attr('Информация', { index: 5, hidden: true })
+      информация: attr('Информация о посылки', { index: 5, hidden: true }),
+      состояние: attr('Состояние посылки', { index: 6 })
     }, { index: 4, displayMemberPath: 'информация' })
   });
 
@@ -59,8 +60,9 @@ export let defineProjections = function (modelClass) {
     пользователь: belongsTo('i-i-s-postamat16-пользователь', 'ФИО', {
       фИО: attr('ФИО', { index: 2 })
     }, { index: -1, hidden: true }),
-    логистика: belongsTo('i-i-s-postamat16-логистика', 'Информация', {
-      информация: attr('Информация', { index: 3 })
+    логистика: belongsTo('i-i-s-postamat16-логистика', 'Информация о посылки', {
+      информация: attr('Информация о посылки', { index: 3 }),
+      состояние: attr('Состояние посылки', { index: 4 })
     }, { index: -1, hidden: true })
   });
 };

@@ -80,4 +80,14 @@
     }}
     {{flexberry-validationmessage error=(v-get validationModel "логистика" "message")}}
   </div>
+  <div class="field" data-test-i-i-s-postamat16-посылка-e-логистика-состояние="true">
+    <label>{{t "forms.i-i-s-postamat16-посылка-e.логистика.состояние-caption"}}</label>
+    {{flexberry-dropdown
+      items=(flexberry-enum "i-i-s-postamat16-состояние")
+      value=model.логистика.состояние
+      class=(if (v-get validationModel.логистика "состояние" "isInvalid") "error")
+      readonly=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel.логистика "состояние" "message")}}
+  </div>
 </form>

@@ -57,10 +57,16 @@
           "index": 2
         },
         {
+          "name": "номерТелефона",
+          "caption": "Номер телефона пользователя",
+          "hidden": false,
+          "index": 3
+        },
+        {
           "name": "номер",
           "caption": "Номер посылки",
           "hidden": false,
-          "index": 3
+          "index": 4
         }
       ],
       "belongsTo": [
@@ -75,16 +81,16 @@
               "name": "фИО",
               "caption": "ФИО",
               "hidden": true,
-              "index": 5
+              "index": 6
             },
             {
               "name": "номерТелефона",
               "caption": "Номер телефона пользователя",
               "hidden": false,
-              "index": 6
+              "index": 7
             }
           ],
-          "index": 4,
+          "index": 5,
           "type": "standard",
           "caption": "Пользователь",
           "name": "пользователь",
@@ -102,10 +108,10 @@
               "name": "номер",
               "caption": "Номер",
               "hidden": true,
-              "index": 8
+              "index": 9
             }
           ],
-          "index": 7,
+          "index": 8,
           "type": "standard",
           "caption": "Номер посылка",
           "name": "посылка",
@@ -123,22 +129,22 @@
               "name": "продления",
               "caption": "Продления посылик",
               "hidden": true,
-              "index": 10
+              "index": 11
             },
             {
               "name": "датаНачала",
               "caption": "Дата начала хранения",
               "hidden": false,
-              "index": 11
+              "index": 12
             },
             {
               "name": "датаЗавершения",
               "caption": "Дата завершения хранения",
               "hidden": false,
-              "index": 12
+              "index": 13
             }
           ],
-          "index": 9,
+          "index": 10,
           "type": "standard",
           "caption": "Продление посылки",
           "name": "хранение",
@@ -175,6 +181,12 @@
           "caption": "Номер посылки",
           "hidden": false,
           "index": 3
+        },
+        {
+          "name": "номерТелефона",
+          "caption": "Номер телефона пользователя",
+          "hidden": false,
+          "index": 5
         }
       ],
       "belongsTo": [
@@ -190,12 +202,6 @@
               "caption": "ФИО",
               "hidden": false,
               "index": 4
-            },
-            {
-              "name": "номерТелефона",
-              "caption": "Номер телефона пользователя",
-              "hidden": false,
-              "index": 5
             }
           ],
           "index": -1,

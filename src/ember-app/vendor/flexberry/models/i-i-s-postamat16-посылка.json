@@ -91,9 +91,15 @@
           "attrs": [
             {
               "name": "информация",
-              "caption": "Информация",
+              "caption": "Информация о посылки",
               "hidden": true,
               "index": 5
+            },
+            {
+              "name": "состояние",
+              "caption": "Состояние посылки",
+              "hidden": false,
+              "index": 6
             }
           ],
           "index": 4,
@@ -154,14 +160,20 @@
           "attrs": [
             {
               "name": "информация",
-              "caption": "Информация",
+              "caption": "Информация о посылки",
               "hidden": false,
               "index": 3
+            },
+            {
+              "name": "состояние",
+              "caption": "Состояние посылки",
+              "hidden": false,
+              "index": 4
             }
           ],
           "index": -1,
           "type": "default",
-          "caption": "Информация",
+          "caption": "Информация о посылки",
           "name": "логистика",
           "relatedTo": "i-i-s-postamat16-логистика",
           "inverse": null

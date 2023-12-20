@@ -112,6 +112,66 @@ $.extend(true, translations, {
           caption: 'Главная',
           title: ''
         },
+        посылка: {
+          caption: 'Посылка',
+          title: 'Посылка',
+          'i-i-s-postamat16-посылка-l': {
+            caption: 'Посылка',
+            title: ''
+          }
+        },
+        пользователь: {
+          caption: 'Пользователь',
+          title: 'Пользователь',
+          'i-i-s-postamat16-пользователь-l': {
+            caption: 'Пользователь',
+            title: 'Пользователь'
+          }
+        },
+        уведомление: {
+          caption: 'Уведомление',
+          title: 'Уведомление',
+          'i-i-s-postamat16-уведомление-l': {
+            caption: 'Уведомление',
+            title: 'Уведомление'
+          },
+          'i-i-s-postamat16-ключ-l': {
+            caption: 'Ключ',
+            title: 'Ключ'
+          }
+        },
+        постамат: {
+          caption: 'Постамат',
+          title: 'Постамат',
+          'i-i-s-postamat16-ячейка-l': {
+            caption: 'Ячейка',
+            title: 'Ячейка'
+          },
+          'i-i-s-postamat16-постамат-l': {
+            caption: 'Постамат',
+            title: 'Постамат'
+          }
+        },
+        'служба-доставки-логистика': {
+          caption: 'Служба доставки/Логистика',
+          title: 'Служба доставки/Логистика',
+          'i-i-s-postamat16-служба-доставки-l': {
+            caption: 'СлужбаДоставки',
+            title: 'Служба доставки'
+          },
+          'i-i-s-postamat16-логистика-l': {
+            caption: 'Логистика',
+            title: 'Логистика'
+          }
+        },
+        хранение: {
+          caption: 'Хранение',
+          title: 'Хранение',
+          'i-i-s-postamat16-хранение-l': {
+            caption: 'Хранение',
+            title: 'Хранение'
+          }
+        },
         postamat16: {
           caption: 'Postamat16',
           title: 'Postamat16',
