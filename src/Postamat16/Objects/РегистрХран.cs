@@ -31,7 +31,10 @@ namespace IIS.Postamat16
     [AccessType(ICSSoft.STORMNET.AccessType.none)]
     [View("РегистрХранE", new string[] {
             "Хранение as \'Хранение\'",
-            "Хранение.Продления as \'Продления\'"}, Hidden=new string[] {
+            "Хранение.Продления as \'Продления\'",
+            "Хранение.ДатаНачала as \'Дата начала хранения\'",
+            "Хранение.ДатаЗавершения as \'Дата завершения хранения\'",
+            "Хранение.Ячейка.НомерЯчейки as \'Номер ячейки\'"}, Hidden=new string[] {
             "Хранение.Продления"})]
     [MasterViewDefineAttribute("РегистрХранE", "Хранение", ICSSoft.STORMNET.LookupTypeEnum.Standard, "", "Продления")]
     public class РегистрХран : ICSSoft.STORMNET.DataObject

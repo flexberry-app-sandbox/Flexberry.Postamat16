@@ -54,7 +54,7 @@ namespace IIS.Postamat16
         
         private System.DateTime fДатаЗавершения;
         
-        private string fПродления;
+        private string fПродления = "Не продлен";
         
         private IIS.Postamat16.Ячейка fЯчейка;
         

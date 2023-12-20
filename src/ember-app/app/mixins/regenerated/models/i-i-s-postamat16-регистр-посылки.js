@@ -29,7 +29,14 @@ export let ValidationRules = {
 export let defineProjections = function (modelClass) {
   modelClass.defineProjection('РегистрПосылкиE', 'i-i-s-postamat16-регистр-посылки', {
     посылка: belongsTo('i-i-s-postamat16-посылка', 'Посылка', {
-      номер: attr('Номер', { index: 1, hidden: true })
+      номер: attr('Номер', { index: 1, hidden: true }),
+      статус: attr('Статус посылки', { index: 2 }),
+      пользователь: belongsTo('i-i-s-postamat16-пользователь', '', {
+        фИО: attr('ФИО пользователя', { index: 3 })
+      }, { index: -1, hidden: true }),
+      логистика: belongsTo('i-i-s-postamat16-логистика', '', {
+        состояние: attr('Состояние доставки', { index: 4 })
+      }, { index: -1, hidden: true })
     }, { index: 0, displayMemberPath: 'номер' })
   });
 };

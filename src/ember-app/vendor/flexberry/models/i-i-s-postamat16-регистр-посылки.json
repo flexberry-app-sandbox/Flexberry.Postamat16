@@ -33,7 +33,50 @@
           "lookupValue": "Номер",
           "lookupValueField": "номер",
           "relationName": "Посылка",
-          "belongsTo": [],
+          "belongsTo": [
+            {
+              "lookupValue": null,
+              "lookupValueField": null,
+              "relationName": "Посылка.Пользователь",
+              "belongsTo": [],
+              "hidden": false,
+              "attrs": [
+                {
+                  "name": "фИО",
+                  "caption": "ФИО пользователя",
+                  "hidden": false,
+                  "index": 3
+                }
+              ],
+              "index": -1,
+              "type": null,
+              "caption": "",
+              "name": "пользователь",
+              "relatedTo": "i-i-s-postamat16-пользователь",
+              "inverse": null
+            },
+            {
+              "lookupValue": null,
+              "lookupValueField": null,
+              "relationName": "Посылка.Логистика",
+              "belongsTo": [],
+              "hidden": false,
+              "attrs": [
+                {
+                  "name": "состояние",
+                  "caption": "Состояние доставки",
+                  "hidden": false,
+                  "index": 4
+                }
+              ],
+              "index": -1,
+              "type": null,
+              "caption": "",
+              "name": "логистика",
+              "relatedTo": "i-i-s-postamat16-логистика",
+              "inverse": null
+            }
+          ],
           "hidden": false,
           "attrs": [
             {
@@ -41,6 +84,12 @@
               "caption": "Номер",
               "hidden": true,
               "index": 1
+            },
+            {
+              "name": "статус",
+              "caption": "Статус посылки",
+              "hidden": false,
+              "index": 2
             }
           ],
           "index": 0,

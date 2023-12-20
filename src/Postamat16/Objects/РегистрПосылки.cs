@@ -31,7 +31,10 @@ namespace IIS.Postamat16
     [AccessType(ICSSoft.STORMNET.AccessType.none)]
     [View("РегистрПосылкиE", new string[] {
             "Посылка as \'Посылка\'",
-            "Посылка.Номер as \'Номер\'"}, Hidden=new string[] {
+            "Посылка.Номер as \'Номер\'",
+            "Посылка.Статус as \'Статус посылки\'",
+            "Посылка.Пользователь.ФИО as \'ФИО пользователя\'",
+            "Посылка.Логистика.Состояние as \'Состояние доставки\'"}, Hidden=new string[] {
             "Посылка.Номер"})]
     [MasterViewDefineAttribute("РегистрПосылкиE", "Посылка", ICSSoft.STORMNET.LookupTypeEnum.Standard, "", "Номер")]
     public class РегистрПосылки : ICSSoft.STORMNET.DataObject
